@@ -46,6 +46,7 @@ func do() error {
 		if err != nil {
 			return err
 		}
+		log.Println("listening for events...")
 		for {
 			watchEvent, ok := <-w.ResultChan()
 			if !ok {
