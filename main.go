@@ -9,8 +9,7 @@ import (
 	libhoney "github.com/honeycombio/libhoney-go"
 
 	"k8s.io/client-go/kubernetes"
-	"k8s.io/client-go/pkg/api"
-	"k8s.io/client-go/pkg/api/v1"
+	api "k8s.io/client-go/pkg/api/v1"
 	"k8s.io/client-go/rest"
 )
 
@@ -43,7 +42,7 @@ func do() error {
 
 	for {
 		start := time.Now()
-		w, err := clientset.Core().Events(api.NamespaceAll).Watch(v1.ListOptions{})
+		w, err := clientset.Core().Events(api.NamespaceAll).Watch(api.ListOptions{})
 		if err != nil {
 			return err
 		}
