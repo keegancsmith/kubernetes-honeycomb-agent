@@ -9,7 +9,7 @@ To get started, just run
 
 ```
 $ kubectl run kubernetes-honeycomb-agent \
-    --image=keegancsmith/kubernetes-honeycomb-agent \
+    --image=keegancsmith/kubernetes-honeycomb-agent:v0.1 \
     --env='HONEYCOMB_TEAM=<REDACTED>'
 ```
 
